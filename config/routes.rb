@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       post "admin_update"
     end
   end
+
+  get "question_by_name", to: 'questions#question_by_name'
 end

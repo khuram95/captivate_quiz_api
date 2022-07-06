@@ -4,6 +4,11 @@ class QuestionsController < ApplicationController
     render json: Question.all.order(name: :asc)
   end
 
+  def question_by_name
+    puts params
+    render json: Question.find_by(name: params[:name])
+  end
+
   def create
     question = Question.find_or_initialize_by(name: params[:name])
 
